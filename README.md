@@ -5,6 +5,19 @@ Automates hourly weather data retrieval from NOAA’s Local Climatological Datab
 
 Language: Python 3.11+
 
-Libraries: Pandas, SQLalchemy (Dataframes), NumPy (Matrix Math), MetPy (Atmospheric calcs), Scipy (Stats), Matplotlib (Visualization), Requests (API HTTP Integration).
+Libraries: Pandas, SQLalchemy (Dataframes), NumPy (Matrix Math), MetPy (Atmospheric calcs), Scipy (Stats), Matplotlib (Visualization), Requests (API HTTP Integration)
 
-Infrastructure: Logging (System monitoring).
+Infrastructure: Logging (System monitoring)
+
+# Pipeline Architecture 
+
+Ingest: requests fetches raw CSV from NOAA.
+
+Clean: Pandas and NumPy handle the ETL process.
+
+Compute: MetPy and SciPy derive advanced metrics like Wet Bulb and heat Index.
+
+Visualize: Matplotlib generates the final probability distributions.
+
+# Project Architecture
+

@@ -39,7 +39,12 @@ This program operates in a 3 step sequence as directed by user input:
   * Input the name of the city, state exactly as its listed on the NOAA website
   * Input a 3 letter designator for the particular station (for example, Atlanta Hartsfield Airport might be ATL)
   * The CSVs are downloaded in batches of ten years to reduce the chances of the server request timing out
-2)
+2) Converts the hourly weather data into daily maximum/average values
+ * Can convert one city at a time, in which case input the city, state exactly as the directory is written inside the NOAA_LCD_CSVs folder and give the same 3 letter designator as the station
+ * Can also convert all cities located within the NOAA_LCD_CSVs folder, in which case an extra file titled checkpoint.csv is saved to prevent redoing completed cities if the process is interrupted
+3) Analyzes daily maximums/averages to create probability distribution plots for each city and record statistical features of the plots in a seperate file/database
+   * Probabilty distribution plots are saved within their respective cities, in a folder called PDF plots
+   * The statistical features (average, skewness, etc.) for the plots are saved within a seperate folder within NOAA_LCD_CSVs called city logs. The distributions of all cities are saved within csvs and sql databases for easy comparison to one another
 
 # Project Architecture
 

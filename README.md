@@ -45,6 +45,7 @@ This program operates in a 3 step sequence as directed by user input:
 3) Analyzes daily maximums/averages to create probability distribution plots for each city and record statistical features of the plots in a seperate file/database
    * Probabilty distribution plots are saved within their respective cities, in a folder called PDF plots
    * The statistical features (average, skewness, etc.) for the plots are saved within a seperate folder within NOAA_LCD_CSVs called city logs. The distributions of all cities are saved within csvs and sql databases for easy comparison to one another
+   * Specific ranges for analysis can be defined, like only examining information between june and august, or only for a specific year range
 
 # Project Architecture
 

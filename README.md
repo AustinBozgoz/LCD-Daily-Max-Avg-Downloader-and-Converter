@@ -34,14 +34,14 @@ python src/main.py
 This program operates in a 3 step sequence as directed by user input:
 
 1) Downloads the hourly LCD information for a given station
-  * To find the correct station, navigate to https://www.ncei.noaa.gov/cdo-web/datatools/lcd and find the station you want to use. Record the 5 digit WBAN for the station (for example, Atlanta Hartsfield Airport is 13874). Then navigate to https://infosys.ars.usda.gov/svn/code/windgen/doc/USAF-WBAN.txt and, using ctrl-F, input the WBAN to locate the full station ID. The 11 digit station identifier is the combination of the first two columns listed beside your station (for example, Atlanta Hartsfield airport would be 72219013874)
-  * The LCD data will be saved in a directory labelled NOAA_LCD_CSVs within the same folder the python scripts are located in
-  * Input the name of the city, state exactly as its listed on the NOAA website
-  * Input a 3 letter designator for the particular station (for example, Atlanta Hartsfield Airport might be ATL)
-  * The CSVs are downloaded in batches of ten years to reduce the chances of the server request timing out
+   * To find the correct station, navigate to https://www.ncei.noaa.gov/cdo-web/datatools/lcd and find the station you want to use. Record the 5 digit WBAN for the station (for example, Atlanta Hartsfield Airport is 13874). Then navigate to https://infosys.ars.usda.gov/svn/code/windgen/doc/USAF-WBAN.txt and, using ctrl-F, input the WBAN to locate the full station ID. The 11 digit station identifier is the combination of the first two columns listed beside your station (for example, Atlanta Hartsfield airport would be 72219013874)
+   * The LCD data will be saved in a directory labelled NOAA_LCD_CSVs within the same folder the python scripts are located in
+   * Input the name of the city, state exactly as its listed on the NOAA website
+   * Input a 3 letter designator for the particular station (for example, Atlanta Hartsfield Airport might be ATL)
+   * The CSVs are downloaded in batches of ten years to reduce the chances of the server request timing out
 2) Converts the hourly weather data into daily maximum/average values
- * Can convert one city at a time, in which case input the city, state exactly as the directory is written inside the NOAA_LCD_CSVs folder and give the same 3 letter designator as the station
- * Can also convert all cities located within the NOAA_LCD_CSVs folder, in which case an extra file titled checkpoint.csv is saved to prevent redoing completed cities if the process is interrupted
+  * Can convert one city at a time, in which case input the city, state exactly as the directory is written inside the NOAA_LCD_CSVs folder and give the same 3 letter designator as the station
+  * Can also convert all cities located within the NOAA_LCD_CSVs folder, in which case an extra file titled checkpoint.csv is saved to prevent redoing completed cities if the process is interrupted
 3) Analyzes daily maximums/averages to create probability distribution plots for each city and record statistical features of the plots in a seperate file/database
    * Probabilty distribution plots are saved within their respective cities, in a folder called PDF plots
    * The statistical features (average, skewness, etc.) for the plots are saved within a seperate folder within NOAA_LCD_CSVs called city logs. The distributions of all cities are saved within csvs and sql databases for easy comparison to one another

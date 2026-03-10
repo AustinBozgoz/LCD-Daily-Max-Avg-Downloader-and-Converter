@@ -19,5 +19,19 @@ Compute: MetPy and SciPy derive advanced metrics like Wet Bulb and heat Index.
 
 Visualize: Matplotlib generates the final probability distributions.
 
+# Getting Started
+
+## Clone the repo
+git clone https://github.com/AustinBozgoz/Novel-Metrics-for-Analyzing-Extreme-Heat-Patterns-Across-US-Cities-
+
+## Install dependencies
+pip install -r requirements.txt
+
+## Run the pipeline
+python src/main.py
+
 # Project Architecture
 
+User Interface: Operates in a 3 step sequence based on user input: (1) 
+
+Data Input: Reads raw csv's from NOAA's LCD database (https://www.ncdc.noaa.gov/cdo-web/datatools/lcd). The database only permits data downloading one decade at a time, so you must download the information each decade starting at January 1st at the beginning of the decade (or whenever the sation first started collecting information) to the last day in the decade (as in December 31st, the 9th year of the decade). E.g. for the 1980s of a particular station, the csv should be dated from January 1st, 1980 to December 31st, 1989. If the station started in 1985, it is also acceptable to use a csv of [Any month] [Any day], 1985 to December 31st, 1989. Manual Adjustments to the code will need to be made in order to include csv's of more recent years (i.e. past 2019).

@@ -53,4 +53,14 @@ Data Acquisition: Downloads Hourly CSV data from NOAAs LCD database (https://www
 
 Data Input: Reads raw csv's of hourly station data. Checks entries for missing entries or nonnumerical characters, and then finds the average or maximum of daily values. Calculates heat index and wetbulb temperature using drybulb temperature and humidity readings. Stores the calculated values of each day in a csv labelled daily max within the respective LCD folder.
 
-Data Analysis: Plots values (daily max/avg temperature, heat index, etc.) of each city in a probability distribution plot within the respective LCD folder. Can be specified for a specific month range or year range. Saves statistical descriptors (avg, skewness, etc.) of all cities within a csv and sql database for easy comparison.
+Data Analysis: Plots values (daily max/avg temperature, heat index, etc.) of each city in a probability distribution plot within the respective LCD folder. Can be specified for a specific month range or year range. Saves statistical descriptors (avg, skewness, etc.) of all cities within a csv and sql database for easy comparison. The statistical descriptors are as follows:
+    * avg -  average value of the PDF plot
+    * std - standard deviation of the PDF plot
+    * skew - skewness of the PDF plot
+    * n - number of datapoints
+    * min - minimum value
+    * True max- absolute max value of the PDF plot
+    * median - median of the PDF
+    * mode - mode of the PDF
+    * AAOMM - deprectated value from a previous project, should be ignored
+    * AAO90 - Annual average over 90 degrees (is 80 degrees for wet-bulb temperature)       the average number of days per year where the respective weather value reaches over 90 degrees 

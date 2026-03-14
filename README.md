@@ -72,4 +72,9 @@ Data Analysis: Plots values (daily max/avg temperature, heat index, etc.) of eac
     * Delta - difference between the average of the pdf and the average of all values above the 99th quartile of the PDF. Has a demonstrable relationship with the longitude and distance from coast of the station. For more information (https://github.com/AustinBozgoz/Novel-Metrics-for-Analyzing-Extreme-Heat-Patterns-Across-US-Cities-)
     * RHavgoverall - Average relative humidity a station experiences
     * Pcau - (heat index only) proportion of all days within the PDF that are WITHIN the "caution" category of heat index values (defined by being between 80 and 90 degrees F in heat index)
-    * POcau - (heat index only) proportion of all days within the PDF that are ABOVE the "caution" category of heat index values (defined by being above 80 degrees F in heat index)
+    * POcau - (heat index only) proportion of all days within the PDF that are ABOVE the minimum for the "caution" category of heat index values (defined by being above 80 degrees F in heat index)
+    * Pexcau - (heat index only) proportion of all days within the PDF that are WITHIN the "extreme caution" category of heat index values (defined by being between 90 and 103 degrees F in heat index)
+    * POexcau - (heat index only) proportion of all days within the PDF that are ABOVE the minimum for the "extreme caution" category of heat index values (defined by being above 90 degrees F in heat index)
+    * Pdan - (heat index only) proportion of all days within the PDF that are WITHIN the "danger" category of heat index values (defined by being between 103 and 124 degrees F in heat index)
+    * POdan - (heat index only) proportion of all days within the PDF that are ABOVE the minimum for the "danger" category of heat index values (defined by being above 103 degrees F in heat index)
+    * Pexdan - (heat index only) proportional of all days within the PDF that are above the minimum for the "extreme danger" category of heat index values (defined by being above 124 degrees F in heat index)

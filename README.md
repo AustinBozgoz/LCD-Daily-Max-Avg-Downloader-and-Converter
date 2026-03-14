@@ -60,8 +60,16 @@ Data Analysis: Plots values (daily max/avg temperature, heat index, etc.) of eac
     * skew - skewness of the PDF plot
     * n - number of datapoints
     * min - minimum value
-    * True max- absolute max value of the PDF plot
+    * True max- absolute max value of the PDF plot (is sensitive to outliers or erroneous data)
     * median - median of the PDF
     * mode - mode of the PDF
     * AAOMM - deprectated value from a previous project, should be ignored
-    * AAO90 - Annual average over 90 degrees (is 80 degrees for wet-bulb temperature)       the average number of days per year where the respective weather value reaches over 90 degrees 
+    * AAO90 - Annual average over 90 degrees (is 80 degrees for wet-bulb temperature) the average number of days per year where the respective weather value reaches over 90 degrees 
+    * 95Q - Value of the 95th quartile (chosen because it is not sensitive to outliers)
+    * ACDO90 - Average consecutive days over 90 degrees (is 80 degrees for wet-bulb temperature) the average length of "high heat periods exhibited in the pdf" defined by consecutive days above 90 degrees
+    * ACDOMM - deprecated value from  previous project, should be ignored
+    * Urange - difference between the average and true maximum of a plot (is sensitive to outliers or erroneous data)
+    * Delta - difference between the average of the pdf and the average of all values above the 99th quartile of the PDF. Has a demonstrable relationship with the longitude and distance from coast of the station. For more information (https://github.com/AustinBozgoz/Novel-Metrics-for-Analyzing-Extreme-Heat-Patterns-Across-US-Cities-)
+    * RHavgoverall - Average relative humidity a station experiences
+    * Pcau - (heat index only) proportion of all days within the PDF that are WITHIN the "caution" category of heat index values (defined by being between 80 and 90 degrees F in heat index)
+    * POcau - (heat index only) proportion of all days within the PDF that are ABOVE the "caution" category of heat index values (defined by being above 80 degrees F in heat index)

@@ -148,7 +148,7 @@ def daily_max(data,date,RHavgall):#returns daily results as a list in with T/RH/
         
         #if all values are missing or errored and somehow don't get changed before this, change it
         for i in range(len(dailyResults)):
-            if dailyResults[i]==-1000:dailyResults[i]='M'
+            if dailyResults[i]==0:dailyResults[i]='M'
     
     return dailyResults,RHavgall
    

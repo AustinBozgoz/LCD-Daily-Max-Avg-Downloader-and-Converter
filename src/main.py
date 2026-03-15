@@ -226,6 +226,8 @@ def main(cwd):
                     os.makedirs(cwd+'\\NOAA_LCD_CSVs\\City_logs\\',exist_ok=True)
                     logging.info('Creating Overall City Log....')
                     log_maker.log_maker(cwd+'\\NOAA_LCD_CSVs\\City_logs\\',months=months,years=years)
+                    logging.info('Clearing Checkpoint graphs...')
+                    checkpoint_maker.checkpoint_maker('clear graphs',cwd+'\\NOAA_LCD_CSVs\\')
                     logging.info('Creating PDFs....')
                     PDF_plotter.PDF_plotter(cwd+'\\NOAA_LCD_CSVs\\',months=months,years=years)
                     if SQL==True:

@@ -1,10 +1,8 @@
 # LCD-Daily-Max-Avg-Downloader-and-Converter
 Automates hourly weather data retrieval from NOAA’s Local Climatological Database (LCD) via API. Processes raw data into daily metrics: max/avg temperature, heat index, wet-bulb temp, and relative humidity. Features built-in visualization for generating probability distribution plots of daily values. The program imports hourly readings of temperature and relative humidity, makes corrections for or ignores erroneous entries, and outputs daily maximum/average readings for Temperature, Heat index, Wet-bulb temperature, and Relative Humidity for every city given to it. It also creates probability distribution plots for those values for each city, and consolidates statistical information for each one of those cities into one large database, allowing for easy comparisons of extreme heat behavior for cities across the United States or even the world.
 
-Based on the statistical analysis from my thesis: Novel Metrics for Analyzing Extreme Heat Patterns across U.S. Cities
-
-Bozgoz, Austin. Novel Metrics for Analyzing Extreme Heat Patterns across US Cities. N.p., 2024. Print.
-
+Based on the statistical analysis from my thesis: Novel Metrics for Analyzing Extreme Heat Patterns across U.S. Cities  
+Bozgoz, Austin. Novel Metrics for Analyzing Extreme Heat Patterns across US Cities. N.p., 2024. Print.  
 https://github.com/AustinBozgoz/Novel-Metrics-for-Analyzing-Extreme-Heat-Patterns-Across-US-Cities-/
 
 # Technical Information:

@@ -22,7 +22,7 @@ Visualize: Matplotlib generates the final probability distributions.
 # Getting Started
 
 ## Clone the repo
-git clone https://github.com/AustinBozgoz/Novel-Metrics-for-Analyzing-Extreme-Heat-Patterns-Across-US-Cities-
+git clone https://github.com/AustinBozgoz/LCD-Daily-Max-Avg-Downloader-and-Converter
 
 ## Install dependencies
 pip install -r requirements.txt

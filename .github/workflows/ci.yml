@@ -1,1 +1,19 @@
+name: Daily Max-avg downloader and converter tester
 
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
+    
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    #grab code
+    - name: Clone Code
+      uses: actions/checkout@v4
+
+    - name: setup python
+    

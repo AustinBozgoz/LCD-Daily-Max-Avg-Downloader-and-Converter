@@ -6,3 +6,5 @@ matplotlib==3.10.3
 scipy==1.15.2
 SQLAlchemy==2.0.45
 requests==2.32.3
+flake8==7.1.2
+pytest==8.3.4
